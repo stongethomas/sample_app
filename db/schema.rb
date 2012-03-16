@@ -10,13 +10,28 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120208002848) do
+ActiveRecord::Schema.define(:version => 20120316033132) do
+
+  create_table "sitelinks", :force => true do |t|
+    t.string   "url"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "users", :force => true do |t|
     t.string   "name"
     t.string   "email"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "encrypted_password"
+    t.string   "salt"
+    t.boolean  "admin",              :default => false
+    t.string   "item1_name"
+    t.string   "item2_name"
+    t.string   "item1_type"
+    t.string   "item2_type"
+    t.integer  "sitelink_number"
+    t.integer  "sitelink_id"
   end
 
   add_index "users", ["email"], :name => "index_users_on_email", :unique => true
