@@ -20,7 +20,7 @@ SampleApp::Application.routes.draw do
   match '/home',	:to => 'pages#home'
   match '/',			:to => 'pages#home'
   root :to => 'pages#home'
-  root_url  => 'http://localhost:3000/'
+ 
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
