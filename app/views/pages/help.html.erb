@@ -1,7 +1,13 @@
 <h1>Help</h1>
 <p>
-  Get help on Ruby on Rails Tutorial at the
-  <a href="http://railstutorial.org/help">Rails Tutorial help page</a>.
-  To get help on this sample app, see the
-  <a href="http://railstutorial.org/book">Rails Tutorial book</a>.
+  To set up your intellifridge, follow these steps:
+  <ol>
+	
+	<li>Go to the <%= link_to "Sign-Up", new_user_path %> page to register a new user</li>
+	<li>Choose the items you would like to store in shelves 1 & 2 and type the names in the signup form (ie: Milk)</li>
+	<li>Select the meaurement unit you would like for each product (ie: L)</li>
+	<li>Get the intellifridge connect number off of the product and enter it in the appropriate field</li>
+	<li>Finish sign in and view your current inventory</li>
+	<li>At any time you can edit your settings or <%= link_to "sign in", signin_path %> to view your inventory</li>
+  </ol>
 </p>

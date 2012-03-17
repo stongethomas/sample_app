@@ -1,1 +1,36 @@
-<%= @user.name %>, <%= @user.email %>
+
+
+
+<table class="profile" summary="Profile information">
+  <tr>
+    <td class="main">
+      <h1>
+        <strong><%= @user.name %></strong>
+      </h1>
+    </td>
+  </tr>
+
+</table>
+
+<table>
+	<tr>
+		<td><strong>Item</strong></td>
+		<td><strong>Quantity</strong></td>
+	</tr>
+	<tr>
+		<td>Eggs</td>
+		<td><%= @eggs %></td>
+	</tr>
+	<tr>
+		<td><%= @user.item1_name %></td>
+		<td><%= @item1 %> <%= @user.item1_type %></td>
+	</tr>
+	<tr>
+		<td><%= @user.item2_name %></td>
+		<td><%= @item2 %> <%= @user.item2_type %></td>
+	</tr>
+
+</table>
+
+
+

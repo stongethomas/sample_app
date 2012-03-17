@@ -1,0 +1,41 @@
+<h1>Edit user</h1>
+
+<%= form_for(@user) do |f| %>
+  <%= render 'shared/error_messages', :object => f.object %>
+  <div class="field">
+    <%= f.label :name %><br />
+    <%= f.text_field :name %>
+  </div>
+  <div class="field">
+    <%= f.label :email %><br />
+    <%= f.text_field :email %>
+  </div>
+  	<div class="field">
+		<%= f.label :item1_name %><br />
+		<%= f.text_field :item1_name %>	
+		<%= f.select :item1_type, [['kg','kg'],['g','g'],['mL','mL'],['L','L']] %>
+	</div>
+
+	<div class="field">
+		<%= f.label :item2_name %><br />
+		<%= f.text_field :item2_name %>
+		<%= f.select :item2_type, [['kg','kg'],['g','g'],['mL','mL'],['L','L']] %>
+	</div>
+	
+	<div class="field">
+    <%= f.label :sitelink_id, "Sitelink Id" %><br />
+    <%= f.text_field :sitelink_id %>
+  </div>
+  
+  <div class="field">
+    <%= f.label :password %><br />
+    <%= f.password_field :password %>
+  </div>
+  <div class="field">
+    <%= f.label :password_confirmation, "Confirmation" %><br />
+    <%= f.password_field :password_confirmation %>
+  </div>
+  <div class="actions">
+    <%= f.submit "Update" %>
+  </div>
+<% end %>

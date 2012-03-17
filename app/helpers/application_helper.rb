@@ -2,11 +2,14 @@ module ApplicationHelper
 
   # Return a title on a per-page basis.
   def title
-    base_title = "Ruby on Rails Tutorial Sample App"
+    base_title = "Intellifridge"
     if @title.nil?
       base_title
     else
       "#{base_title} | #{@title}"
     end
+  end
+  def logo
+    image_tag("logo.png", :alt => "Intellifridge", :class => "round")
   end
 end
